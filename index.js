@@ -4,9 +4,9 @@ const app = express()
 const port = 3001
 
 connectToMongo();
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+
+
+app.use(express.json())
 
 app.use('/api/auth',require("./routes/auth"));
 
