@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
-const mongoURI = "mongodb://localhost:27017";
+const mongoURI = "mongodb://localhost:27017/notebook";
 
 const connectToMongo = async () => {
     try {
-        mongoose.set('strictQuery', false)
         mongoose.connect(mongoURI) 
         console.log('Mongo connected')
     } catch(error) {
